@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 링크태그 : a
+         1) 속성 - href(필수 속성) : 해당 태그가 클릭되면 가야 할 곳
+                 1. 상대주소 : 현재 문서를 기준으로 연결할 문서가 어디있는지 표현  {"../list/list.html"} 점 하나의 의미.현재폴더 .. 점 2개를 찍으면 상위 폴더의 개념이 들어가게 됨{
+                    우리는 사이트를 만들때 백엔드를 대부분 작업하기에 상대주소를 많이 쓴다
+                 }
+                 2. 절대주소 : 경로를 처음부터 끝까지 다 쓰는 형태 = {https://www.naver.com} {외부 경로 링크 걸때나 사용 }
+         2) target : 어디에 링크를 띄울 것인지 결정
+             self : default 현재 창을 덮씌어 버림
+             blank : 새 창 타겟을 정해 줘야함
+
+         손모양(하이퍼링크) 밑줄,색상이 들어감
+         색상이 3가지 종류로 들어감
+               1.링크 방문 전 색상 - blue
+               2.링크 방문 후 색상 - purple
+               2.링크 active  색상 - red
+        현재 창에서 페이지 이동이 들어감 -->
+    <a href="https://www.naver.com" target="_blank"> naver</a>
+    <p>
+      <a href="../list/list.html" target="_blank">공고</a>
+    </p>
+  </body>
+</html>
