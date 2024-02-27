@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form : 웹 서버에 정보를 제출하기 위한 양식 범위를 정의
+                   
+         1) action : form 안에 정보들을 어디로 전송할 것인가에 대한  URL(절대경로,상대경로)
+            action 을 쓰지 않았다면 현재 페이지 경로가 그대로 쓰임
+         2) method : 서버로 전송할 HTTP 방식 ( get/Post)
+        
+           get (기본) : 주소줄에 특정 값들이 따라다님
+             https://naver.com?query = 영화&ie=utf8 {검색}
+            
+           post : 전송된 값들이 감춰짐(로그인, 회원가입, )-->
+    <!-- <form action="" method="post"></form>
+    <form action="" method="get"></form> -->
+
+    <!-- div 로 감싸면 블럭을 나뉘어서 바로 밑으로 내려 가진다 
+     -->
+
+    <!-- 폼 요소
+        1) input 태그
+            -text : 한 줄 짜리 텍스트 입력용
+            -radio :
+            -checkbox :  
+            - submit: 폼 서버로 전송
+            - reset : 
+            - button:
+            - password : 
+        
+        
+        
+        전역속성 : 모든 태그에 사용할 수 있는 속성
+             class, id, name, data- 
+              id : 현재 페이지에서 값은 중복 안됨-->
+
+    <form action="" method="get">
+      <div><label for="firstName">First name</label></div>
+      <div><input type="text" name="firstName" id="firstName" /></div>
+
+      <div><label for="Lastname">Last name</label></div>
+      <div><input type="text" name="Lastname" id="Lastname" /></div>
+      <div>
+        <input type="submit" value="전송" />
+        <!-- http://192.168.0.6:5500/basic/form/Form1.html?firstName=김&Lastname=시온
+                       action 주소 ? key = value & key = value    ? 물음표를 기준으로 앞에 써준 웹 주소가 action에 써준 주소다
+                             key : key  값으로 사용 되는 것은 input 요소에  name 값
+                             value : 사용자 입력 값 -->
+      </div>
+    </form>
+  </body>
+</html>

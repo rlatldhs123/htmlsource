@@ -3,48 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cute Character Login</title>
+    <title>Ski Resort Homepage</title>
     <style>
-      /* CSS 스타일 */
-      .login-container {
-        width: 300px;
-        margin: 0 auto;
-        text-align: center;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      .character {
-        cursor: pointer;
+      header {
+        background-color: #004080;
+        color: white;
+        padding: 20px;
+        animation: slideDown 1s ease;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      section {
+        padding: 50px 0;
+        text-align: center;
+        animation: slideUp 1s ease;
+      }
+      section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      section p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      section#about {
+        background-color: #f2f2f2;
+      }
+      section#slopes {
+        background-color: #66ccff;
+      }
+      section#accommodation {
+        background-color: #ffb366;
+      }
+      section#contact {
+        background-color: #ff6666;
+      }
+      footer {
+        background-color: #004080;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        animation: slideUp 1s ease;
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="login-container">
-      <h2>Cute Character Login</h2>
-      <div class="character">
-        <img src="character1.jpg" alt="Character 1" width="100" height="100" />
+    <header>
+      <div>
+        <h1>Welcome to Our Ski Resort</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#slopes">Slopes</a></li>
+            <li><a href="#accommodation">Accommodation</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="character">
-        <img src="character2.jpg" alt="Character 2" width="100" height="100" />
-      </div>
-      <div class="character">
-        <img src="character3.jpg" alt="Character 3" width="100" height="100" />
-      </div>
-      <div class="character">
-        <img src="character4.jpg" alt="Character 4" width="100" height="100" />
-      </div>
-      <div id="login-status"></div>
-    </div>
+    </header>
 
-    <script>
-      // JavaScript 코드
-      document.querySelectorAll(".character").forEach((item) => {
-        item.addEventListener("click", (event) => {
-          // 클릭한 캐릭터의 alt 속성을 가져와서 로그인 메시지로 사용
-          const characterName = event.target.alt;
-          document.getElementById("login-status").innerHTML = `Logging in as ${characterName}...`;
-          // 여기에 로그인 처리 로직을 추가할 수 있습니다.
-          // 예: 서버에 캐릭터 정보를 전송하여 로그인 처리
-        });
-      });
-    </script>
+    <section id="about">
+      <div>
+        <h2>About Us</h2>
+        <p>Located amidst the stunning mountain ranges, our ski resort offers an unforgettable experience for ski enthusiasts.</p>
+        <p>Explore our wide range of amenities and services designed to cater to your every need.</p>
+      </div>
+    </section>
+
+    <section id="slopes">
+      <div>
+        <h2>Our Slopes</h2>
+        <p>With over 50 kilometers of meticulously groomed slopes, we offer an exhilarating experience for skiers of all levels.</p>
+        <div>
+          <div>
+            <h3>Beginner Slopes</h3>
+            <p>Perfect for first-time skiers and families, our beginner slopes provide a gentle learning experience.</p>
+          </div>
+          <div>
+            <h3>Intermediate Slopes</h3>
+            <p>For skiers seeking more challenges, our intermediate slopes offer a mix of terrain and stunning views.</p>
+          </div>
+          <div>
+            <h3>Advanced Slopes</h3>
+            <p>Thrill-seekers will love our advanced slopes, featuring steep descents and challenging obstacles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="accommodation">
+      <div>
+        <h2>Accommodation</h2>
+        <p>Relax and unwind in our cozy mountain lodge, offering comfortable rooms and convenient access to the slopes.</p>
+        <a href="#booking">Book Now</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div>
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more about our resort? Get in touch with us:</p>
+        <address>
+          Email: info@skiresort.com<br />
+          Phone: 123-456-7890
+        </address>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p>&copy; 2024 Ski Resort. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
